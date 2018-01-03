@@ -1,4 +1,4 @@
-# TYPO3 Extension 'backend_debug'
+# TYPO3 Extension `backend_debug
 
 This extension helps admins working in the backend. Currently implemented feature:
 
@@ -11,3 +11,6 @@ This feature is enabled only for admins.
 
 ![Show fieldname](/Resources/Public/Documentation/fieldname.png)
 
+## Installation
+
+Use composer with `composer require georgringer/backend-debug`.

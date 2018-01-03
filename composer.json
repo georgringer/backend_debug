@@ -1,0 +1,34 @@
+{
+	"name": "georgringer/backend-debug",
+	"keywords": [
+		"TYPO3",
+		"extension",
+		"backend",
+		"debug"
+	],
+	"authors": [
+		{
+			"name": "Georg Ringer",
+			"role": "Developer",
+			"homepage": "http://ringer.it"
+		}
+	],
+	"type": "typo3-cms-extension",
+	"description": "Some debug helper for the TYPO3 backend",
+	"homepage": "http://ringer.it",
+	"license": [
+		"GPL-2.0+"
+	],
+	"require": {
+		"typo3/cms-core": "^8.7 || ^9.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"GeorgRinger\\BackendDebug\\": "Classes"
+		}
+	},
+	"replace": {
+		"backend_debug": "self.version",
+		"typo3-ter/backend-debug": "self.version"
+	}
+}
