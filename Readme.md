@@ -1,4 +1,4 @@
-# TYPO3 Extension `backend_debug
+# TYPO3 Extension `backend_debug`
 
 This extension helps admins working in the backend. Currently implemented feature:
 
