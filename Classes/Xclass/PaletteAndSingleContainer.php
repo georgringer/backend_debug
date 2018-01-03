@@ -3,9 +3,17 @@
 namespace GeorgRinger\BackendDebug\Xclass;
 
 use TYPO3\CMS\Backend\Utility\BackendUtility;
+use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 
 class PaletteAndSingleContainer extends \TYPO3\CMS\Backend\Form\Container\PaletteAndSingleContainer {
 
+    /**
+     * Wrap a single element
+     *
+     * @param array $element Given element as documented above
+     * @param array $additionalPaletteClasses Additional classes to be added to HTML
+     * @return string Wrapped element
+     */
     protected function wrapSingleFieldContentWithLabelAndOuterDiv(array $element, array $additionalPaletteClasses = [])
     {
         $fieldName = $element['fieldName'];
@@ -22,7 +30,7 @@ class PaletteAndSingleContainer extends \TYPO3\CMS\Backend\Form\Container\Palett
         $label = BackendUtility::wrapInHelp($this->data['tableName'], $fieldName, htmlspecialchars($element['fieldLabel']));
 
         if ($this->getBackendUser()->isAdmin()) {
-            $label .= '<code>[' . $fieldName . ']</code>';
+            $label .= '<code>[' . htmlspecialchars($fieldName) . ']</code>';
         }
         $content = [];
         $content[] = '<div class="' . implode(' ', $paletteFieldClasses) . '">';
@@ -38,7 +46,7 @@ class PaletteAndSingleContainer extends \TYPO3\CMS\Backend\Form\Container\Palett
     /**
      * Returns the current BE user.
      *
-     * @return \TYPO3\CMS\Core\Authentication\BackendUserAuthentication
+     * @return BackendUserAuthentication
      */
     protected function getBackendUser()
     {
