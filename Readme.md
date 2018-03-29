@@ -1,5 +1,7 @@
 # TYPO3 Extension `backend_debug`
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/GeorgRinger/19.99)
+
 This extension helps admins working in the backend. Currently implemented feature:
 
 ## Features
