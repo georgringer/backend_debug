@@ -5,8 +5,8 @@ namespace GeorgRinger\BackendDebug\Xclass;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 
-class PaletteAndSingleContainer extends \TYPO3\CMS\Backend\Form\Container\PaletteAndSingleContainer {
-
+class PaletteAndSingleContainer extends \TYPO3\CMS\Backend\Form\Container\PaletteAndSingleContainer
+{
     /**
      * Wrap a single element
      *
@@ -32,6 +32,7 @@ class PaletteAndSingleContainer extends \TYPO3\CMS\Backend\Form\Container\Palett
         if ($this->getBackendUser()->isAdmin()) {
             $label .= '<code>[' . htmlspecialchars($fieldName) . ']</code>';
         }
+
         $content = [];
         $content[] = '<div class="' . implode(' ', $paletteFieldClasses) . '">';
         $content[] =    '<label class="t3js-formengine-label">';
