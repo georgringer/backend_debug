@@ -33,6 +33,8 @@ $boot = function () {
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\TYPO3\CMS\Backend\Form\Element\SelectSingleElement::class] = [
         'className' => \GeorgRinger\BackendDebug\Xclass\SelectSingleElement::class,
     ];
+
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][] = 'GeorgRinger\BackendDebug\Utility\PageRenderer->setup';
 };
 
 $boot();
